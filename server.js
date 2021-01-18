@@ -23,7 +23,7 @@ device
   .on('connect', function() {
     console.log('connect');
     //device.subscribe('topic_1');
-    device.publish('MyConnectPolicy', JSON.stringify({ test_data: 'NodeJS server connected...'}));
+    device.publish('topic_2', JSON.stringify({ test_data: 'NodeJS server connected...'}));
   });
  
 device
