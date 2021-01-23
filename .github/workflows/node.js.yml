@@ -23,7 +23,7 @@ jobs:
       - name: post deployment
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: cd pub_sub &&  npm install
+          command: cd pub_sub &&  npm install && pm2 reload pub_sub
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ${{ secrets.KEY }}
